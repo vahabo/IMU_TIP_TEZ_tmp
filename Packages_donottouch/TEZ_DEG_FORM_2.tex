@@ -1,0 +1,70 @@
+\renewcommand*{\LayoutTextField}[2]{\makebox[1em][l]{#1: }%
+   \raisebox{\baselineskip}{\raisebox{-\height}{#2}}}
+
+%\renewcommand{\LayoutChoiceField}[2]{%
+%\makebox[2.5em][l]{#2}\parbox[t]{\linewidth}{#1}%
+%}
+%\changepage{}{20mm}{}{-10mm}{}{}{}{}{}
+\newgeometry{left=5cm,top=4cm,bottom=0.1cm,right=0.1cm}
+
+\begin{center}
+T.C.\\
+SAĞLIK BAKANLIĞI\\
+İSTANBUL MEDENİYET ÜNİVERSİTESİ\\
+GÖZTEPE EĞİTİM ve ARAŞTIRMA HASTANESİ\\[2mm]
+{\small \textbf{TEZ DEĞERLENDİRME FORMU}}
+\end{center}
+
+\begin{Form}[action=mailto:imutipfakultesi@medeniyet.edu.tr,encoding=html,method=post]
+
+\begin{tabular}{R{5cm}L{11cm}}
+\textbf{ADI SOYADI}: & \authornames \\
+\textbf{GÖREVİ}: &  {\footnotesize \MakeUppercase{\klinikname}} \\
+\textbf{ADAYIN HAZIRLIDIĞI TEZİN ADI}: &  {\footnotesize \ttitle} \\[4mm]
+\end{tabular}
+\bigskip
+
+
+
+{\small \begin{tabbing}
+\hspace*{9cm}\=\hspace*{1.2cm}\= \kill
+1. SAYFA SAYISI : \> \TextField[name=sayfa, charsize=9pt, width=2cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+2. TABLO SAYISI : \> \TextField[name=tablo, width=2cm,charsize=9pt,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+3. ŞEKİL : \> \TextField[name=sekil, width=2cm,charsize=9pt,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+4. İSTATİSTİK SAYISI : \> \TextField[name=ist, charsize=9pt, width=2cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+5- LİTERATÜR SAYISI VE FAYDALANMA DURUMU : \> \TextField[name=lit, width=7cm,bordercolor=0 1 1, borderwidth=0, charsize=9pt,backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+6-YAZI TERTİBİ : \> \TextField[name=yazitertibi, charsize=9pt,width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+7- KONUYU ANLATMA VE KONUYA HAKİMİYETI : \> \TextField[name=konu,charsize=9pt, width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+8- İNCELEMENİN BİLİMSEL BAKIMDAN TUTUMU : \> \TextField[name=bilimsellik,charsize=9pt, width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+9- ORİJİNAL OLUP OLMADIĞI :\> \TextField[name=bilimsellik,charsize=9pt, width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+\end{tabbing}}
+
+
+
+\begin{tabbing}
+\hspace*{5cm}\= \hspace*{3cm}\= \hspace*{7cm}\= \kill
+\> \textbf{SONUÇ} \> \ChoiceMenu[combo,name=karar,width=8cm,charsize=12pt,bordercolor=0 1 1, default=BAŞARILI]{\mbox{}}{BAŞARILI, DEĞİŞİKLİK YAPILMASI GEREKİR, BAŞARISIZ} \\[2mm]
+\end{tabbing}
+
+
+
+
+
+
+\begin{textblock}{3}(8.5,.5)
+\hfill \today\\
+\end{textblock}
+
+\vspace*{2cm}
+\begin{tabbing}
+\hspace*{7cm}\= \hspace*{3cm}\= \kill
+\> İsim Soyad \> \TextField[name=isim,charsize=10pt, width=5cm,borderwidth=0,bordercolor=0 1 1,,backgroundcolor=0.9 0.9 0.9]{}\\
+\> İmza:
+\end{tabbing}
+
+
+
+\vfill
+\Reset[borderwidth=0,color=0.5 0.5 0.5]{Temizle} \quad \Submit[borderwidth=0]{Gönder} \quad  \Acrobatmenu{Print}{Yazdır}
+\end{Form}
+

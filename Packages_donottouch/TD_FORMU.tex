@@ -1,0 +1,71 @@
+
+
+
+
+\renewcommand*{\LayoutTextField}[2]{\makebox[1em][l]{#1 }%
+   \raisebox{\baselineskip}{\raisebox{-\height}{#2}}}
+
+%\renewcommand{\LayoutChoiceField}[2]{%
+%\makebox[2.5em][l]{#2}\parbox[t]{\linewidth}{#1}%
+%}
+%\changepage{}{20mm}{}{-10mm}{}{}{}{}{}
+\newgeometry{left=5cm,top=4cm,bottom=2cm,right=0.1cm}
+
+\begin{center}
+T.C.\\
+SAĞLIK BAKANLIĞI\\
+İSTANBUL MEDENİYET ÜNİVERSİTESİ\\
+GÖZTEPE EĞİTİM ve ARAŞTIRMA HASTANESİ\\[2mm]
+{\small \textbf{TEZ DEĞERLENDİRME FORMU}}
+\end{center}
+
+\begin{Form}[action=mailto:imutipfakultesi@medeniyet.edu.tr,encoding=html,method=post]
+
+\begin{tabular}{R{3cm}L{12cm}}
+\textbf{TEZ BAŞLIĞI}: & {\footnotesize \ttitle} \\
+\textbf{YAZAR}: & \authornames \\
+\textbf{DANIŞMAN}: & \supname  \\
+                   & %\supnameh\\    
+\end{tabular}
+
+%\begin{tabular}{R{3cm}L{12cm}}
+%\textbf{TEZ BAŞLIĞI} & \TextField[name=tb,default=, multiline=true, height=1.2cm, width=11cm, charsize=10pt, bordercolor=0 1 1, borderwidth=0, backgroundcolor={.95 .95 .95}]{\mbox{}} \\[6mm]
+%\textbf{YAZAR} & \TextField[name=y,default=, multiline=false, width=6cm,charsize=10pt, bordercolor=0 1 1,borderwidth=0,backgroundcolor={.95 .95 .95}]{\mbox{}} \\
+%\textbf{DANIŞMAN} &  \TextField[name=d,default=, multiline=false, width=6cm,charsize=10pt, bordercolor=0 1 1,borderwidth=0,backgroundcolor={.95 .95 .95}]{\mbox{}}  \\
+%\end{tabular}
+
+\begin{tabbing}
+\hspace*{10.2cm}\=\hspace*{1.5cm}\= \kill
+\> \; VAR \> YOK \\[2mm]
+SCI-Exp Kapsamında Yayınlanma Potansiyeli \> \ChoiceMenu[radio,radiosymbol=\ding{52}, name=yp,charsize=14pt, bordercolor=0 1 1,]{\mbox{}}{\mbox{},\mbox{\space\space\space\space}}\\[3mm]
+Patent Alma Potansiyeli \> \ChoiceMenu[radio,radiosymbol=\ding{52}, name=pp,charsize=14pt, bordercolor=0 1 1,]{\mbox{}}{\mbox{},\mbox{\space\space\space\space}}\\[2mm]
+\end{tabbing} 
+
+\begin{tabbing}
+\hspace{3.3 cm} \= \kill
+KARAR \> \ChoiceMenu[combo,name=karar, width=8cm,charsize=10pt,bordercolor=0 1 1, default=]{\mbox{}}
+{,BAŞARILI, DEĞİŞİKLİK YAPILMASI GEREKİR, BAŞARISIZ} \\[4mm]
+YORUMLAR \> \TextField[name=Comment,default=, multiline=true,height=10\baselineskip,
+  width=12cm,charsize=10pt, bordercolor=0 1 1,borderwidth=0,backgroundcolor={.95 .95 .95}]{\mbox{}} \\[4mm]
+\end{tabbing}
+
+%\begin{textblock}{3}(7.7,-0.2)
+%...
+%\end{textblock}
+
+%\begin{textblock}{3}(8,-0.2)
+%Tarih:
+%\end{textblock}
+
+\begin{tabbing}
+\hspace*{10cm}\= \hspace*{3cm}\= \kill
+\> Tarih \' \TextField[name=t,default= ... / ... / 20.., multiline=false, width=3cm,charsize=10pt, bordercolor=0 1 1,borderwidth=0,backgroundcolor={.95 .95 .95}]{\mbox{}}\\
+\> İsim Soyad \' \TextField[name=isim,charsize=10pt, width=5.3cm,charsize=10pt, borderwidth=0,bordercolor=0 1 1,,backgroundcolor=0.95 0.95 0.95]{}\\[2mm]
+\> İmza \'
+\end{tabbing}
+
+\vfill
+\Reset[borderwidth=0,color=0.5 0.5 0.5]{Temizle} \quad \Submit[borderwidth=0]{Gönder} \quad  \Acrobatmenu{Print}{Yazdır}
+\end{Form}
+
+%\restoregeometry

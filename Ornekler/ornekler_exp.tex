@@ -1,0 +1,507 @@
+\newpage
+\lhead{\emph{örnekler}}
+
+Bkz referans \cite{jorgensen1979heparin}.
+Tablo \ref{tablo:1}'de görüldüğü gibi;\footnote{dipnot eklemek için}
+
+\begin{mycode}
+	\begin{itemize}\itemsep-6pt 
+	    	\item[\ding{51}] yes
+		    \item[\ding{55}] no 
+	\end{itemize}
+\end{mycode}
+
+\begin{itemize}\itemsep-6pt 
+ \item[\ding{51}] yes
+ \item[\ding{55}] no 
+\end{itemize}
+
+
+\begin{mycode}
+	\begin{dingautolist}{192}\itemsep-6pt 
+		 \item The first item
+	\end{dingautolist}
+\end{mycode}
+
+\begin{dingautolist}{192}\itemsep-6pt 
+\item The first item
+\item The second item
+\item The third item
+\end{dingautolist}
+
+
+\begin{mycode}
+ \dingfill {228}
+\end{mycode}
+
+\dingfill {228}
+
+
+\begin{enumerate}[1.]\itemsep-6pt
+\item bir
+\item iki
+\item üç
+\end{enumerate}
+
+\begin{minipage}{0.45\textwidth}
+	\begin{enumerate}[1.]\itemsep-6pt%for capital roman numbers.
+		\item bir
+		\item iki
+		\item üç
+	\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+	\begin{enumerate}[a.]\itemsep-6pt
+		\item bir
+		\item iki
+		\item üç
+	\end{enumerate}
+\end{minipage}\\[1cm]
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=3cm]{../Figures/263px-Kefir_glass_london_feb_10}
+\caption[kfr]{Kefir bardağı}
+\label{fig:263px-Kefir_glass_london_feb_10}
+\end{figure}
+
+Bu araya yazılarımızı yazabiliriz.
+
+%\begin{landscape}
+\begin{minipage}{\textwidth}
+	\centering
+	\begin{threeparttable}
+		\caption{Tablo başlığı buraya yazılır}  \label{tablo:1} %Tablo başlığı ve referans etiketi
+		% ---------------------------------------
+		\begin{tabular}{lccccr}
+			\hline\hline
+			Ranks & FAVORABLE \tnote{*} &(\%) & UNFAVORABLE &(\%) & Total \\
+			 \hline
+			A& 23 & (91.4) & 7 & (8.6) & 81 \\ 
+			B& 58 & (90.6) & 6 & (9.4) & 64 \\ 
+			C& 10 & (25.6) & 29 & (74.4) & 39 \\
+			\hline
+		\end{tabular}
+		%------------------------------------------	    
+		\begin{tablenotes}
+			\footnotesize
+			\item[] buraya not ekle\\
+			\item[*] the first note; %tabloya "\tnote{*}" ekleyin 
+			\item[$\dag$] second note ; %tabloya "\tnote{$\dag$}" ekleyin
+			%\item[$\ddag$] third note ;
+			%\item[$\S$] third note ;
+			%\item[**] the first note; 
+		\end{tablenotes}
+	\end{threeparttable}
+\end{minipage}
+%\end{landscape}
+
+
+
+\pagebreak
+%---------------------------------------------------------
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+% % % % % % % % % % % % % % % % % % % % % % % % % % 
+\begin{mycode}
+ \begin{center}
+\begin{threeparttable}
+	\renewcommand{\arraystretch}{1.3}
+	\rowcolors{2}{gray!20}{white}
+	\caption{Üç parçalı tablo}
+	\label{tablo:UP} %Tablo başlığı ve referans etiketi
+	% -------------------------------------------------------
+       \begin{tabular}{rccccc}
+        	\hline\hline
+        	Ranks & FAVORABLE \tnote{*} &(\%) & UNFAVORABLE &(\%) & Total \\ \hline
+        	0 & 74 & (91.4) & 7 & (8.6) & 81 \\ 
+        	1 & 58 & (90.6) & 6 & (9.4) & 64 \\ 
+        	6 & 10 & (25.6) & 29 & (74.4) & 39 \\\hline
+       \end{tabular}
+	%-------------------------------------------------------	    
+	\begin{tablenotes}
+		\footnotesize
+		\item[*] the first note; %tabloya "\tnote{*}" ekleyin 
+		\item[$\dag$] second note ; %tabloya "\tnote{$\dag$}" ekleyin
+		%\item[$\ddag$] third note ;
+		%\item[$\S$] third note ;
+		%\item[**] the first note; 
+	\end{tablenotes}
+\end{threeparttable}
+ \end{center}
+\end{mycode}
+
+
+\begin{center}
+\begin{threeparttable}
+   \renewcommand{\arraystretch}{1.3}
+   \rowcolors{2}{gray!20}{white}
+    \caption{Üç parçalı tablo}
+    \label{tablo:UP} %Tablo başlığı ve referans etiketi
+% -------------------------------------------------------
+       \begin{tabular}{rccccc}
+	    \hline\hline
+	    Ranks & FAVORABLE \tnote{*} &(\%) & UNFAVORABLE &(\%) & Total \\ \hline
+	    0 & 74 & (91.4) & 7 & (8.6) & 81 \\ 
+	    1 & 58 & (90.6) & 6 & (9.4) & 64 \\ 
+	    6 & 10 & (25.6) & 29 & (74.4) & 39 \\\hline
+	    \end{tabular}
+%-------------------------------------------------------	    
+\begin{tablenotes}
+ \footnotesize
+	\item[*] the first note; %tabloya "\tnote{*}" ekleyin 
+	\item[$\dag$] second note ; %tabloya "\tnote{$\dag$}" ekleyin
+	%\item[$\ddag$] third note ;
+	%\item[$\S$] third note ;
+	%\item[**] the first note; 
+\end{tablenotes}
+\end{threeparttable}
+\end{center}
+
+%-----------------------------------
+%Örnek Tablo 1 (arraystrech ile satır büyüklüğü ayarlanır)
+%----------------------------
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lclclclc}
+\hline
+\hline 
+Month & Week & Programme \\
+\hline
+May & 3-4 & Cycle Tour \\
+June & 1-2 & \textless DCP Project\\
+July & 1-2 & \textgreater Clean Energy\\
+August & 3-4 & Interim Report\\
+\hline
+\end{tabular}
+\caption{Four months plan: where,what how}
+\label{tab:tab1}
+\end{table}
+\newpage
+Daha detaylı bilgi is tablo \ref{tab:tab2}'de görülüyor.
+%------------------------------
+%Örnek Tablo 2 burada L(left) R(right) J(center) ile genişlik ayarlanır Toplam size = column sayısıs
+%-------------------------------
+%--------------------------
+%Tablo 3 profesyonel görünümlü tablo
+%--------------------------
+\begin{mycode}
+  \begin{table}[H]
+  	\renewcommand{\arraystretch}{1.3}
+  	\begin{tabular}{l C{3cm} C{3cm}}
+       	\toprule
+            	& \mcc{Item}   \\
+         \cmidrule(r){2-3}
+            	Animal  & Description & Price \tablefootnote{der} (\$) \\ 
+         \midrule
+            	\mr{\rotatebox[origin=c]{90}{Gnat}} & per gram    & 13.65    \\
+            	& each        & 0.01                           \\
+            	Gnu \tablefootnote{man}             & stuffed     & 92.50  \\
+            	Emu                                 & stuffed     & 33.33     \\
+            	Armadillo                           & frozen      & 8.99  \\ 
+          \bottomrule
+  	\end{tabular}
+  	\caption{Profes table}
+  	\label{tab:tabP}
+  \end{table}
+\end{mycode}
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{l C{3cm} C{3cm}}
+	\toprule
+	                                    & \mcc{Item}    \\
+	\cmidrule(r){2-3}
+          Animal  & Description & Price \tablefootnote{der} (\$) \\ \midrule
+	\mr{\rotatebox[origin=c]{90}{Gnat}} & per gram    & 13.65                          \\
+	                                    & each        & 0.01                           \\
+	Gnu \tablefootnote{man}             & stuffed     & 92.50                          \\
+	Emu                                 & stuffed     & 33.33                          \\
+	Armadillo                           & frozen      & 8.99                           \\ \bottomrule
+\end{tabular}
+\caption{Profes table}
+\label{tab:tabP}
+\end{table}
+%--------------------------
+%Öbek Tablo 4
+%--------------------------
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[htpn]
+
+  \centering
+  \renewcommand{\arraystretch}{1.5}
+  \caption{Add caption}
+    \begin{tabular}{lC{3cm}r}
+    	\toprule
+    	değişken & ölen   & kalan \tablefootnote{ss} \\ \midrule
+    	a        & $22^2$ &           $\leqslant$ 33 \\
+    	b        & $3_2$  &           $\geqslant$ 66 \\ \bottomrule
+    \end{tabular}%   
+  \label{tab:tab4}%
+\end{table}
+
+\newpage
+\begin{table}[c]
+\hbox{
+\rotcaption{Minimum number of individuals; effect of rotating table
+and caption separately}\label{rotfloat3}%
+\begin{sideways}
+\begin{tabular}[t]{cccccccccR{3cm}}
+\hline
+Phase&Total&Cattle&Sheep&Pig&Red \tablefootnote{ilk kez} Deer&Horse&Dog&Goat&Other\\
+\hline
+&1121&54&12&32&1&1&1&1&1 polecat\\
+3&8255&58&6&35&1&1&1&1&1 roe deer, 1 hare, 1 cat, 1 otter\\
+4&543&45&6&45&4&1&1&---&---\\
+\hline
+&9919&157&24&112&6&3&3&2&5\\
+\hline
+\end{tabular}
+\end{sideways}
+}
+\end{table}
+\cleardoublepage
+
+%--------------------------
+%Burada resmi kestik ve çevirdik 
+%---------------------------
+\newpage
+\pagestyle{fancy}
+\begin{figure}[htpn]
+\centering
+\includegraphics[trim=2cm 2cm 1cm 1cm, clip=true, totalheight=0.2\textheight, angle=45]{../Figures/Electron}
+\caption[elect2]{Electron grafiği}
+\label{fig:Electr}
+\end{figure}
+%-------------------------------
+% landscape page
+%-------------------------------
+\newpage
+\pagestyle{plain}
+\begin{landscape}
+ % Table generated by Excel2LaTeX from sheet 'Sheet1'
+ \begin{table}[htbp]
+   \centering
+   \caption{Add caption}
+     \begin{tabular}{lccr}
+     	\toprule
+     	variables                                     &     FAVORABLE     & UNFAVORABLE \tablefootnote{dfıjreıo} &  \\
+     	                                              &      (n=342)      &               (n=165)                &              p-value \\ \midrule
+     	\multicolumn{1}{c}{}                          &                   &                                      & \multicolumn{1}{c}{} \\
+     	Age (years), median (IQR)                     & 34.0 (23.0, 46.0) &          44.0 (28.0, 62.0)           &               <0.001 \\
+     	Female gender                                 &   165 (48.2\%)    &             76 (46.1\%)              &                 0.64 \\
+     	Elapsed time (days), median (IQR)             & 20.0 (10.0, 30.0) &          20.0 (12.0, 34.0)           &                 0.32 \\
+     	AC / NV                                       &                   &                                      &               <0.001 \\
+     	None                                          &    65 (19.0\%)    &              14 (8.5\%)              &  \\
+     	Noisea vomiting \tablefootnote{bulantı kusma} &    89 (26.0\%)    &              11 (6.7\%)              &  \\
+     	Altered consciousness                         &    67 (19.6\%)    &             80 (48.5\%)              &  \\
+     	AC plus NV                                    &   121 (35.4\%)    &             60 (36.4\%)              &  \\
+     	Altered consciousness                         &   188 (55.0\%)    &             140 (84.8\%)             &               <0.001 \\
+     	Nausea/Vomiting                               &   210 (61.4\%)    &             71 (43.0\%)              &               <0.001 \\
+     	Meningeal irritation sign                     &   231 (67.5\%)    &             121 (73.3\%)             &                 0.18 \\
+     	Focal Neurological deficit                    &                   &                                      &               <0.001 \\
+     	None                                          &   271 (79.2\%)    &             105 (63.6\%)             &  \\
+     	Central\_Nerve\_Palsy                         &    38 (11.1\%)    &             24 (14.5\%)              &  \\
+     	CNP plus MD                                   &     8 (2.3\%)     &              11 (6.7\%)              &  \\
+     	Motor\_Deficit                                &    25 (7.3\%)     &             25 (15.2\%)              &  \\
+     	Neurological deficit                          &    71 (20.8\%)    &             60 (36.4\%)              &               <0.001 \\
+     	Central Nerve Palsy                           &    46 (13.5\%)    &             35 (21.2\%)              &                0.025 \\
+     	2th Cranial Nerve                             &    21 (6.1\%)     &              6 (3.6\%)               &                 0.24 \\
+     	3th Cranial Nerve                             &    16 (4.7\%)     &              12 (7.3\%)              &                 0.23 \\
+     	Sequel                                        &     0 (0.0\%)     &             79 (47.9\%)              &  \\ \bottomrule
+     \end{tabular}%
+   \label{tab:addlabel}%
+ \end{table}%
+\end{landscape}
+\newpage
+\pagestyle{plain}
+\begin{landscape}
+\begin{figure}[htpn]
+\centering
+\includegraphics[width=0.3\linewidth]{../Figures/Electron}
+\caption[e1]{Electron grafiği}
+\label{fig:Electron}
+\end{figure}
+\end{landscape}
+%---------------------------------
+%Yazı resim etrafında
+%---------------------------------
+\newpage
+
+
+\pagestyle{fancy}
+
+\begin{mycode}
+\begin{wrapfigure}[15]{l}[75pt]{10cm}
+	\begin{center}
+        	\includegraphics[width=0.5\linewidth, height=0.3\textheight]{../Figures/symbols}
+        	\end{center}
+        	\vspace{10pt}
+        	\caption{\LaTeX \; için kullanılan semboller}
+        	\label{fig:sym5}
+\end{wrapfigure}
+\end{mycode}
+
+
+\begin{wrapfigure}[15]{l}[75pt]{10cm}
+ \begin{center}
+\includegraphics[width=0.5\linewidth, height=0.3\textheight]{../Figures/symbols}
+\end{center}
+  \vspace{10pt}
+  \caption{\LaTeX \; için kullanılan semboller}
+  \label{fig:sym5}
+\end{wrapfigure}
+Most gulls, particularly Larus species, are ground nesting carnivores, which will take live food or scavenge opportunistically. The live food often includes crabs and small fish. Apart from the kittiwakes, gulls  are typically coastal or inland species, rarely venturing far out to sea. The large species take up to four years to attain full adult plumage, but two years is typical for small gulls.
+Gulls — the larger species in particular — are resourceful and highly-intelligent birds, demonstrating complex methods of communication and a highly-developed social structure. Certain species (e.g. the Herring Gull) have exhibited tool use behaviour. Many species of gull 
+have learned to co-exist successfully with man and have thrived in human habitats. Others rely on kleptoparasitism to get their food.
+%-------------------
+% bölümleri ayırmak için
+%-------------------
+\phantomsection
+
+\newpage
+
+\begin{mycode}
+\pagestyle{plain}
+\topcaption{top caption}
+  \tabletail{\hline \multicolumn{2}{r}{{Devam ediyor}} \\ }
+  \tablehead{\hline variables & FAVORABLE & UNFAVORABLE&                        \\
+	   &      (n=342)        &          (n=165)          &    \textit p-value \\ \hline }
+         \begin{mpxtabular}{lccr}
+        	Age (years), median (IQR)                & 34.0 (23.0, 46.0) & 44.0 (28.0, 62.0) & <0.001 \\
+        	Female gender                            &   165 (48.2\%)    &    76 (46.1\%)    &   0.64 \\
+        	Elapsed time (days), median (IQR)        & 20.0 (10.0, 30.0) & 20.0 (12.0, 34.0) &   0.32 \\
+        	AC / NV                                  &                   &                   & <0.001 \\
+        	Sequel                                   &     0 (0.0\%)     &    79 (47.9\%)    &  \\ 
+        \bottomrule
+         \end{mpxtabular}\\[3cm]
+\cleardoublepage
+\end{mycode}
+
+\begin{center}
+%\taburowcolors[2] 2{white .. lightgray}
+\begin{longtabu} to \linewidth {X[3, l] X[2, l] X[2, c]}
+\caption{Kohortun genel özellikleri} \label{tablo:TAB1}\\
+ \toprule[1mm]
+\textbf{FAKTÖRLER} &  & \textbf{DEĞER} \\
+                   &  &  n(\%)\\
+\hline
+\endfirsthead
+\textbf{FAKTÖRLER} &  & \textbf{DEĞER} \\
+\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Devam ediyor}} \\
+\endfoot
+\hline
+\endlastfoot
+
+                         	Yaş, ortalama (SS) &                            & 38.4 (11.9)       \\
+\rowcolor{white!90!black}	Cinsiyet           & Erkek                      & 1188 (85.9)        \\
+
+
+\end{longtabu}
+\end{center}
+
+
+\pagestyle{plain}
+ \topcaption{top caption}
+ \tabletail{\hline \multicolumn{2}{r}{{Devam ediyor}} \\ }
+ \tablehead{\hline variables & FAVORABLE & UNFAVORABLE&                        \\
+                                           &      (n=342)        &          (n=165)          &    \textit p-value \\ \hline }
+ \begin{mpxtabular}{lccr}
+ 	Age (years), median (IQR)                & 34.0 (23.0, 46.0) & 44.0 (28.0, 62.0) & <0.001 \\
+ 	Female gender                            &   165 (48.2\%)    &    76 (46.1\%)    &   0.64 \\
+ 	Elapsed time (days), median (IQR)        & 20.0 (10.0, 30.0) & 20.0 (12.0, 34.0) &   0.32 \\
+ 	AC / NV                                  &                   &                   & <0.001 \\
+ 	None                                     &    65 (19.0\%)    &    14 (8.5\%)     &  \\
+ 	Noisea vomiting                          &    89 (26.0\%)    &    11 (6.7\%)     &  \\
+ 	Altered consciousness                    &    67 (19.6\%)    &    80 (48.5\%)    &  \\
+ 	AC plus NV                               &   121 (35.4\%)    &    60 (36.4\%)    &  \\
+ 	Altered consciousness                    &   188 (55.0\%)    &   140 (84.8\%)    & <0.001 \\
+ 	Nausea/Vomiting            L{4cm}l              &   210 (61.4\%)    &    71 (43.0\%)    & <0.001 \\
+ 	Meningeal irritation sign                &   231 (67.5\%)    &   121 (73.3\%)    &   0.18 \\
+ 	Focal Neurological deficit               &                   &                   & <0.001 \\
+ 	None                                     &   271 (79.2\%)    &   105 (63.6\%)    &  \\
+ 	Central\_Nerve\_Palsy                    &    38 (11.1\%)    &    24 (14.5\%)    &  \\
+ 	CNP plus MD                              &     8 (2.3\%)     &    11 (6.7\%)     &  \\
+ 	Motor\_Deficit                           &    25 (7.3\%)     &    25 (15.2\%)    &  \\
+ 	Neurological deficit                     &    71 (20.8\%)    &    60 (36.4\%)    & <0.001 \\
+ 	Central Nerve Palsy                      &    46 (13.5\%)    &    35 (21.2\%)    &  0.025 \\
+ 	2th Cranial Nerve                        &    21 (6.1\%)     &     6 (3.6\%)     &   0.24 \\
+ 	3th Cranial Nerve                        &    16 (4.7\%)     &    12 (7.3\%)     &   0.23 \\
+ 	Noisea vomiting \footnote{bulantı kusma} &    89 (26.0\%)    &    11 (6.7\%)     &  \\
+ 	Altered consciousness                    &    67 (19.6\%)    &    80 (48.5\%)    &  \\
+ 	AC plus NV                               &   121 (35.4\%)    &    60 (36.4\%)    &  \\
+ 	Altered consciousness                    &   188 (55.0\%)    &   140 (84.8\%)    & <0.001 \\
+ 	Nausea/Vomiting                          &   210 (61.4\%)    &    71 (43.0\%)    & <0.001 \\
+ 	Meningeal irritation sign                &   231 (67.5\%)    &   121 (73.3\%)    &   0.18 \\
+ 	Focal Neurological deficit               &                   &                   & <0.001 \\
+ 	None                                     &   271 (79.2\%)    &   105 (63.6\%)    &  \\
+ 	Central\_Nerve\_Palsy                    &    38 (11.1\%)    &    24 (14.5\%)    &  \\
+ 	CNP plus MD                              &     8 (2.3\%)     &    11 (6.7\%)     &  \\
+ 	Motor\_Deficit                           &    25 (7.3\%)     &    25 (15.2\%)    &  \\
+ 	Neurological deficit                     &    71 (20.8\%)    &    60 (36.4\%)    & <0.001 \\
+ 	Central Nerve Palsy                      &    46 (13.5\%)    &    35 (21.2\%)    &  0.025 \\
+ 	2th Cranial Nerve                        &    21 (6.1\%)     &     6 (3.6\%)     &   0.24 \\
+ 	3th Cranial Nerve                        &    16 (4.7\%)     &    12 (7.3\%)     &   0.23 \\
+ 	AC plus NV                               &   121 (35.4\%)    &    60 (36.4\%)    &  \\
+ 	Altered consciousness                    &   188 (55.0\%)    &   140 (84.8\%)    & <0.001 \\
+ 	Nausea/Vomiting                          &   210 (61.4\%)    &    71 (43.0\%)    & <0.001 \\
+ 	Meningeal irritation sign                &   231 (67.5\%)    &   121 (73.3\%)    &   0.18 \\
+ 	Focal Neurological deficit               &                   &                   & <0.001 \\
+ 	None                                     &   271 (79.2\%)    &   105 (63.6\%)    &  \\
+ 	Central\_Nerve\_Palsy                    &    38 (11.1\%)    &    24 (14.5\%)    &  \\
+ 	CNP plus MD                              &     8 (2.3\%)     &    11 (6.7\%)     &  \\
+ 	Motor\_Deficit                           &    25 (7.3\%)     &    25 (15.2\%)    &  \\
+ 	Neurological deficit                     &    71 (20.8\%)    &    60 (36.4\%)    & <0.001 \\
+ 	Central Nerve Palsy                      &    46 (13.5\%)    &    35 (21.2\%)    &  0.025 \\
+ 	2th Cranial Nerve                        &    21 (6.1\%)     &     6 (3.6\%)     &   0.24 \\
+ 	3th Cranial Nerve                        &    16 (4.7\%)     &    12 (7.3\%)     &   0.23 \\
+ 	AC plus NV                               &   121 (35.4\%)    &    60 (36.4\%)    &  \\
+ 	Altered consciousness                    &   188 (55.0\%)    &   140 (84.8\%)    & <0.001 \\
+ 	Nausea/Vomiting                          &   210 (61.4\%)    &    71 (43.0\%)    & <0.001 \\
+ 	Meningeal irritation sign                &   231 (67.5\%)    &   121 (73.3\%)    &   0.18 \\
+ 	Focal Neurological deficit               &                   &                   & <0.001 \\
+ 	None                                     &   271 (79.2\%)    &   105 (63.6\%)    &  \\
+ 	Central\_Nerve\_Palsy                    &    38 (11.1\%)    &    24 (14.5\%)    &  \\
+ 	CNP plus MD                              &     8 (2.3\%)     &    11 (6.7\%)     &  \\
+ 	Motor\_Deficit                           &    25 (7.3\%)     &    25 (15.2\%)    &  \\
+ 	Neurological deficit                     &    71 (20.8\%)    &    60 (36.4\%)    & <0.001 \\
+ 	Central Nerve Palsy                      &    46 (13.5\%)    &    35 (21.2\%)    &  0.025 \\
+ 	2th Cranial Nerve                        &    21 (6.1\%)     &     6 (3.6\%)     &   0.24 \\
+ 	3th Cranial Nerve                        &    16 (4.7\%)     &    12 (7.3\%)     &   0.23 \\
+ 	Sequel                                   &     0 (0.0\%)     &    79 (47.9\%)    &  \\ \bottomrule
+ \end{mpxtabular}\\[3cm]
+     \cleardoublepage
+
+\begin{landscape}
+\begin{ThreePartTable}
+	\begin{TableNotes}
+		\item[*] Bulantı kusma\\
+		\item[] Another note
+	\end{TableNotes}
+	\begin{longtable}{L{9cm} c}
+		\caption{Tablo başlığı}\\
+		\toprule
+		Column 1 & Column 2 \\
+		\midrule
+		\endhead
+		\cmidrule{2-2}
+		\multicolumn{2}{r}{\textit{devam ediyor}}
+		\endfoot
+		\bottomrule
+		\insertTableNotes\\
+		\endlastfoot
+		%----tablo------
+
+		Age (years), median (IQR)                 &  <0.001  \\ 
+		Female gender                             &    0.64  \\ 
+		Elapsed time (days), median (IQR)         &    0.32  \\ 
+		AC / NV                                   &  <0.001  \\ 
+		None                                      &    \\ 
+		Noisea vomiting         \tnote{*}                  &    \\ 
+		Altered consciousness                     &    \\ 
+	\end{longtable}
+\end{ThreePartTable}
+\end{landscape}
+
+

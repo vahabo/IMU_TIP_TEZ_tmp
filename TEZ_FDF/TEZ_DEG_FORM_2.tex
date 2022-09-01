@@ -1,0 +1,92 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{courier}
+\renewcommand*{\familydefault}{phv}
+\usepackage[left=25mm,top=25mm,bottom=10mm,right=10mm]{geometry}
+\usepackage{fancyhdr}
+\lhead{}\chead{T.C\\SAĞLIK BAKANLIĞI\\İSTANBUL MEDENİYET ÜNİVERSİTESİ\\GÖZTEPE EĞİTİM ve ARAŞTIRMA HASTANESİ\\[0.5cm]\footnotesize \textbf{TEZ DEĞERLENDİRME FORMU}}\rhead{{}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[
+  pdftex,a4paper=true,colorlinks=true,
+  pdftitle={Key form},pdfsubject={Key},
+  pdfauthor={HV},
+  pdfpagemode=UseNone,pdfstartview=FitH,pagebackref,pdfhighlight={/N}
+]{hyperref}
+\usepackage[overlay]{textpos}
+%\usepackage{showframe}
+
+
+
+%\renewcommand*{\LayoutTextField}[2]{\makebox[1em][l]{#1: }%
+%   \raisebox{\baselineskip}{\raisebox{-\height}{#2}}}
+%
+%\renewcommand{\LayoutChoiceField}[2]{%
+%\makebox[2.5em][l]{#2}\parbox[t]{\linewidth}{#1}%
+%}
+
+\begin{document}
+
+\vspace*{2cm}
+
+\begin{Form}[action=mailto:imutipfakultesi@medeniyet.edu.tr,encoding=html,method=post]
+
+\begin{tabular}{rl}
+\textbf{ADI SOYADI}: & \TextField[name=YAZAR, width=6cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}} \\
+\textbf{GÖREVİ}: &  \TextField[name=DANISMAN,
+  width=6cm,bordercolor=0 1 1,borderwidth=0,backgroundcolor={.9 .9 .9}]{\mbox{}} \\
+\textbf{ADAYIN HAZIRLIDIĞI TEZİN ADI}: &  \TextField[name=TezB, multiline=true,height=4\baselineskip,
+  width=10cm,bordercolor=0 1 1,borderwidth=0,backgroundcolor={.9 .9 .9}]{\mbox{}} \\[4mm]
+\end{tabular}
+\bigskip
+
+
+
+\begin{tabbing}
+\hspace*{9cm}\=\hspace*{1.2cm}\= \kill
+1. SAYFA SAYISI : \> \TextField[name=sayfa, charsize=9pt, width=2cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+2. TABLO SAYISI : \> \TextField[name=tablo, width=2cm,charsize=9pt,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+3. ŞEKİL : \> \TextField[name=sekil, width=2cm,charsize=9pt,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+4. İSTATİSTİK SAYISI : \> \TextField[name=ist, charsize=9pt, width=2cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+5- LİTERATÜR SAYISI VE FAYDALANMA DURUMU : \> \TextField[name=lit, width=7cm,bordercolor=0 1 1, borderwidth=0, charsize=9pt,backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+6-YAZI TERTİBİ : \> \TextField[name=yazitertibi, charsize=9pt,width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+7- KONUYU ANLATMA VE KONUYA HAKİMİYETI : \> \TextField[name=konu,charsize=9pt, width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+8- İNCELEMENİN BİLİMSEL BAKIMDAN TUTUMU : \> \TextField[name=bilimsellik,charsize=9pt, width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+9- ORİJİNAL OLUP OLMADIĞI :\> \TextField[name=bilimsellik,charsize=9pt, width=7cm,bordercolor=0 1 1, borderwidth=0, backgroundcolor={.9 .9 .9}]{\mbox{}}\\[2mm]
+\end{tabbing}
+
+
+
+\begin{tabbing}
+\hspace*{5cm}\= \hspace*{3cm}\= \hspace*{7cm}\= \kill
+\> \textbf{SONUÇ} \> \ChoiceMenu[combo,name=karar,width=8cm,charsize=12pt,bordercolor=0 1 1, default=BAŞARILI]{\mbox{}}{BAŞARILI, DEĞİŞİKLİK YAPILMASI GEREKİR, BAŞARISIZ} \\[2mm]
+\end{tabbing}
+
+
+
+
+
+
+\begin{textblock}{3}(8.5,.5)
+\hfill \today\\
+\end{textblock}
+
+\vspace*{2cm}
+\begin{tabbing}
+\hspace*{7cm}\= \hspace*{3cm}\= \kill
+\> İsim Soyad \> \TextField[name=isim,charsize=10pt, width=5cm,borderwidth=0,bordercolor=0 1 1,,backgroundcolor=0.9 0.9 0.9]{}\\
+\> İmza:
+\end{tabbing}
+
+
+
+\vfill
+\Reset[borderwidth=0,color=0.5 0.5 0.5]{Temizle} \quad \Submit[borderwidth=0]{Gönder} \quad  \Acrobatmenu{Print}{Yazdır}
+\end{Form}
+\end{document}

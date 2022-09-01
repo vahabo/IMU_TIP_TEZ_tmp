@@ -1,0 +1,194 @@
+\documentclass[ngerman,a4paper]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{courier}
+\renewcommand*{\familydefault}{phv}
+\usepackage[left=25mm,top=25mm,bottom=10mm,right=10mm]{geometry}
+\usepackage{fancyhdr}
+\lhead{ABC, Inc.}\chead{}\rhead{XYZ Dept.}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[
+  pdftex,a4paper=true,colorlinks=true,
+  pdftitle={Key form},pdfsubject={Key},
+  pdfauthor={ich},
+  pdfpagemode=UseNone,pdfstartview=FitH,
+  pagebackref,pdfhighlight={/N}
+]{hyperref}
+\usepackage[pdftex]{insdljs}
+\immediate\pdfobj {
+<<
+  /WP << /S /JavaScript /JS (willPrint();) >>
+  /DP << /S /JavaScript /JS (didPrint();) >>
+>>
+}
+\pdfcatalog{/AA \the\pdflastobj\space 0 R}
+\begin{insDLJS}[exaaae]{exaaae}{Document Level JavaScript}
+
+// indicate that the function was not yet run
+var done = 0;
+
+function colorsPrinting()
+{
+  this.getField("vorname").fillColor = color.white;
+  this.getField("name").fillColor = color.white;
+  this.getField("abt").fillColor = color.white;
+  this.getField("zeit").fillColor = color.white;
+  this.getField("from").fillColor = color.white;
+  this.getField("until").fillColor = color.white;
+  this.getField("ht").fillColor = color.white;
+  this.getField("e1").fillColor = color.white;
+  this.getField("e2").fillColor = color.white;
+
+  this.getField("vorname").strokeColor = color.black;
+  this.getField("name").strokeColor = color.black;
+  this.getField("abt").strokeColor = color.black;
+  this.getField("zeit").strokeColor = color.black;
+  this.getField("from").strokeColor = color.black;
+  this.getField("until").strokeColor = color.black;
+  this.getField("ht").strokeColor = color.black;
+  this.getField("e1").strokeColor = color.black;
+  this.getField("e2").strokeColor = color.black;
+
+  this.getField("vorname").textFont = font.Helv;
+  this.getField("name").textFont = font.Helv;
+  this.getField("abt").textFont = font.Helv;
+  this.getField("zeit").textFont = font.Helv;
+  this.getField("from").textFont = font.Helv;
+  this.getField("until").textFont = font.Helv;
+  this.getField("from").textColor = color.black;
+  this.getField("until").textColor = color.black;
+}
+
+function colorsScreen()
+{
+
+  var newcolor = [ "RGB", 0.65, 0.79, 0.94];
+  this.getField("vorname").fillColor = newcolor;
+  this.getField("name").fillColor = newcolor;
+  this.getField("abt").fillColor = newcolor;
+  this.getField("zeit").fillColor = newcolor;
+  this.getField("from").fillColor = newcolor;
+  this.getField("until").fillColor = newcolor;
+  this.getField("ht").fillColor = newcolor;
+  this.getField("e1").fillColor = newcolor;
+  this.getField("e2").fillColor = newcolor;
+
+  this.getField("vorname").strokeColor = newcolor;
+  this.getField("name").strokeColor = newcolor;
+  this.getField("abt").strokeColor = newcolor;
+  this.getField("zeit").strokeColor = newcolor;
+  this.getField("from").strokeColor = newcolor;
+  this.getField("until").strokeColor = newcolor;
+  this.getField("ht").strokeColor = newcolor;
+  this.getField("e1").strokeColor = newcolor;
+  this.getField("e2").strokeColor = newcolor;
+
+  this.getField("vorname").textFont = font.HelvB;
+  this.getField("name").textFont = font.HelvB;
+  this.getField("abt").textFont = font.HelvB;
+  this.getField("zeit").textFont = font.HelvB;
+  this.getField("from").textFont = font.HelvB;
+  this.getField("from").textColor = color.black;
+  this.getField("until").textColor = color.black;
+  this.getField("until").textFont = font.HelvB;
+}
+
+function validateTime()
+{
+  this.delay = true;
+  if((event.value == "u") || (event.value == "unlimited")) {
+    this.getField("from").display = display.hidden;
+    this.getField("until").display = display.hidden;
+  } else {
+    this.getField("from").display = display.visible;
+    this.getField("until").display = display.visible;
+    this.getField("from").setFocus();
+  }
+  this.delay = false;
+}
+
+function willPrint()
+{
+  this.delay = true;
+  colorsPrinting();
+  this.delay = false;
+}
+
+function didPrint()
+{
+  this.delay = true;
+  colorsScreen();
+  this.delay = false;
+}
+
+// function to run when opening the document
+function myFirstJavaScriptFunction()
+{
+  if(!done) {
+    done = 1;
+    this.delay = true;
+    colorsScreen();
+    this.getField("abt").currentValueIndices = 0;
+    this.getField("abt").editable = true;
+    this.getField("zeit").currentValueIndices = 0;
+    this.getField("vorname").setFocus();
+    this.delay = false;
+  }
+}
+\end{insDLJS}
+\OpenAction{/S /JavaScript /JS (myFirstJavaScriptFunction();)}
+\newcommand{\textforlabel}[2]{%
+\TextField[name={#1},value={#2},width=7em,align=2,%
+bordercolor={1 1 1},readonly=true]{}%
+}
+\begin{document}
+\section*{Request for a key}
+\begin{Form}
+\begin{tabular}{|rl|}
+\hline
+&\\*[-0.9em]\multicolumn{2}{|c|}{\textbf{Employee}}\\
+&\\*[-0.9em]\textforlabel{vn}{First name:}&%
+\TextField[name=vorname,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{nn}{Name:}&%
+\TextField[name=name,width=20em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{ab}{Department:}&%
+\ChoiceMenu[name=abt,width=20em,popdown=true,combo=true,value=v,%
+bordercolor={0.65 0.79 0.94}]{}{%
+Sales=v,Production=f,Service=s}\\
+&\\*[-0.9em]\hline
+&\\*[-0.9em]\multicolumn{2}{|c|}{\textbf{Time}}\\
+&\\*[-0.9em]\textforlabel{z}{Time:}&%
+\ChoiceMenu[name=zeit,width=20em,popdown=true,value=u,%
+validate={validateTime();},%
+bordercolor={0.65 0.79 0.94}]{}{%
+unlimited=u,limited=b}\\
+&\\*[-0.9em]\textforlabel{v}{from:}&%
+\TextField[name=from,width=10em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{b}{until:}&%
+\TextField[name=until,width=10em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\hline
+&\\*[-0.9em]\multicolumn{2}{|c|}{%
+\textbf{Doors}}\\
+&\\*[-0.9em]\textforlabel{th}{Front door:}&%
+\CheckBox[name=ht,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{t1}{Ground floor:}&%
+\CheckBox[name=e1,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\*[-0.9em]\textforlabel{t2}{First floor:}&%
+\CheckBox[name=e2,width=1.2em,%
+bordercolor={0.65 0.79 0.94}]{}\\
+&\\
+\hline
+\end{tabular}
+\end{Form}
+\end{document}
